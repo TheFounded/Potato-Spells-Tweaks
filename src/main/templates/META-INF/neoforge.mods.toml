@@ -11,7 +11,7 @@ loaderVersion="[2,)" #mandatory
 
 # The license for you mod. This is mandatory metadata and allows for easier comprehension of your redistributive properties.
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
-license="MIT"
+license="All Rights Reserved"
 
 # A URL to refer people to when problems occur with this mod
 #issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
@@ -23,7 +23,7 @@ license="MIT"
 modId="potatospellsnspellbooks" #mandatory
 
 # The version number of the mod
-version="1.0.0" #mandatory
+version="1.0.1" #mandatory
 
 # A display name for the mod
 displayName="Potato Spells" #mandatory
