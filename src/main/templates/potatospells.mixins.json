@@ -1,0 +1,13 @@
+{
+  "required":true,
+  "package": "net.potato_modding.potatospells.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ISSMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
