@@ -19,7 +19,6 @@ public class ServerConfigs {
     public static final ModConfigSpec.ConfigValue<Double> RESIST_POW;
 
     static {
-        double x = 1;
         {
             BUILDER.push("Potato Spells Utils");
             BUILDER.comment("Cooldown Reduction Softcap");
