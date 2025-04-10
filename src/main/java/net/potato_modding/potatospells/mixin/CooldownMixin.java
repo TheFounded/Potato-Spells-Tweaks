@@ -3,7 +3,6 @@ package net.potato_modding.potatospells.mixin;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
-import net.potato_modding.potatospells.utils.PotatoUtils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.config.ServerConfigs;
 import org.spongepowered.asm.mixin.Mixin;
