@@ -22,6 +22,6 @@ public class CooldownMixin {
         if (castSource == CastSource.SWORD) {
             itemCoolDownModifer = ServerConfigs.SWORDS_CD_MULTIPLIER.get().floatValue();
         }
-        return (int) (spell.getSpellCooldown() * (2 - PotatoUtils.cooldownsoftcap(playerCooldownModifier)) * itemCoolDownModifer);
+        return (int) (spell.getSpellCooldown() * (2 - net.potato_modding.potatospells.utils.PotatoUtils.cooldownsoftcap(playerCooldownModifier)) * itemCoolDownModifer);
     }
 }

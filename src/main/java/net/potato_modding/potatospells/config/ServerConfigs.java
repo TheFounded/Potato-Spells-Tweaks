@@ -5,6 +5,8 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class ServerConfigs {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     public static final ModConfigSpec BUILDING;
+    public static ModConfigSpec.ConfigValue<Double> COOLDOWN_FORMULA;
+    public static ModConfigSpec.ConfigValue<Double> COOLDOWN_MINIMUM;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_MIN;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_TOP;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_DIV;
@@ -17,6 +19,17 @@ public class ServerConfigs {
     public static final ModConfigSpec.ConfigValue<Double> RESIST_MAX;
     public static final ModConfigSpec.ConfigValue<Double> RESIST_CAP;
     public static final ModConfigSpec.ConfigValue<Double> RESIST_POW;
+
+    // Failed attempt at implementing whole formula in config
+    /*public static double cooldownsoftcap(double x) {
+        {
+            COOLDOWN_FORMULA = BUILDER.gameRestart().define("CooldownFormula", 1 / (-1 * x) + 2);
+            COOLDOWN_MINIMUM = BUILDER.gameRestart().define("CooldownMinimum", 1.0);
+        }
+        double CooldownFormula = ServerConfigs.COOLDOWN_FORMULA.get().floatValue();
+        double CooldownMinimum = ServerConfigs.COOLDOWN_MINIMUM.get().floatValue();
+        return x <= CooldownMinimum ? x : CooldownFormula;
+    }*/
 
     static {
         {
