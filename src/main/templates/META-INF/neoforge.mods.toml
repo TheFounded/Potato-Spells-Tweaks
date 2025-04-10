@@ -20,13 +20,13 @@ license="All Rights Reserved"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="potatospellsnspellbooks" #mandatory
+modId="potatospellbookstweaks" #mandatory
 
 # The version number of the mod
-version="1.0.1" #mandatory
+version="1.1.0" #mandatory
 
 # A display name for the mod
-displayName="Potato Spells" #mandatory
+displayName="Potato Spells Tweaks" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
