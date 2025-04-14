@@ -5,8 +5,9 @@ import net.neoforged.neoforge.common.ModConfigSpec;
 public class ServerConfigs {
     private static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     public static final ModConfigSpec BUILDING;
-    public static ModConfigSpec.ConfigValue<Double> COOLDOWN_FORMULA;
-    public static ModConfigSpec.ConfigValue<Double> COOLDOWN_MINIMUM;
+    public static ModConfigSpec.ConfigValue<Boolean> COOLDOWN_UNCAP;
+    public static ModConfigSpec.ConfigValue<Boolean> CAST_UNCAP;
+    public static ModConfigSpec.ConfigValue<Boolean> RESIST_UNCAP;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_MIN;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_TOP;
     public static final ModConfigSpec.ConfigValue<Double> COOLDOWN_DIV;
@@ -34,7 +35,21 @@ public class ServerConfigs {
     static {
         {
             BUILDER.push("Potato Spells Utils");
-            BUILDER.comment("Cooldown Reduction Softcap");
+            BUILDER.comment("Here you can change the formulas to suit your balance");
+            BUILDER.comment("");
+            BUILDER.comment("DO NOT change anything if you don't know what you are doing!");
+            BUILDER.comment("There's some really annoying math going on, so avoid using random numbers.");
+            BUILDER.comment("");
+            BUILDER.comment("Also, you can change the toggle bellow to use 'uncapped' formulas");
+            BUILDER.comment("");
+            BUILDER.comment("Use 'less restrictive' cooldown formula (caps at 80% with 6.4 cooldown)");
+            COOLDOWN_UNCAP = BUILDER.worldRestart().define("Cooldown Uncap", false);
+            BUILDER.comment("Use 'less restrictive' cast time formula (caps at 80% with 6.4 cast reduction)");
+            CAST_UNCAP = BUILDER.worldRestart().define("Cast Time Uncap", false);
+            BUILDER.comment("Use 'less restrictive' resistance formula (caps at 80% with 6.4 resistance)");
+            RESIST_UNCAP = BUILDER.worldRestart().define("Resistance Uncap", false);
+            BUILDER.comment("");
+            BUILDER.push("Cooldown Reduction Softcap");
             BUILDER.comment("Formula: 'x <= Min ? x : (Top / (Div + Attribute)) + Add'");
             BUILDER.comment("Default: 'x <= 1 ? x : 1/(-1*x)+2'");
             BUILDER.comment("Calculator: https://www.desmos.com/calculator/mxvvtgww1e");
@@ -56,7 +71,7 @@ public class ServerConfigs {
             BUILDER.comment("");
             BUILDER.comment("");
             BUILDER.comment("");
-            BUILDER.comment("Cast Time Reduction Softcap");
+            BUILDER.push("Cast Time Reduction Softcap");
             BUILDER.comment("Formula: 'x <= Min ? x : (Top / (Div + Attribute)) + Add'");
             BUILDER.comment("Default: 'x <= 1 ? x : 1/(-1*x)+2'");
             BUILDER.comment("Calculator: https://www.desmos.com/calculator/mxvvtgww1e");
@@ -78,7 +93,7 @@ public class ServerConfigs {
             BUILDER.comment("");
             BUILDER.comment("");
             BUILDER.comment("");
-            BUILDER.comment("Spell Resistance Softcap");
+            BUILDER.push("Spell Resistance Softcap");
             BUILDER.comment("Formula: 'x <= Min ? x : Max - (Cap * (Pow / Attribute))'");
             BUILDER.comment("Default: 'x <= 1 ? x : 1.8-(8*0.1/x)'");
             BUILDER.comment("Calculator: https://www.desmos.com/calculator/kzu10pf5fv");
