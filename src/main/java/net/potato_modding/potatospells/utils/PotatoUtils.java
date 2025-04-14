@@ -1,5 +1,6 @@
 package net.potato_modding.potatospells.utils;
 
+import com.sun.jna.WString;
 import net.potato_modding.potatospells.config.ServerConfigs;
 
 public class PotatoUtils {
@@ -8,9 +9,9 @@ public class PotatoUtils {
     static float cdtop = ServerConfigs.COOLDOWN_TOP.get().floatValue();
     static float cddiv = ServerConfigs.COOLDOWN_DIV.get().floatValue();
     static float cdadd = ServerConfigs.COOLDOWN_ADD.get().floatValue();
-    static boolean cduncap = ServerConfigs.COOLDOWN_UNCAP.get();
+    static String cduncap = ServerConfigs.COOLDOWN_UNCAP.get();
     public static double cooldownsoftcap(double x) {
-        if(!cduncap) {
+        if(cduncap == "false") {
             return x <= cdmin ? x : cdtop / (cddiv * x) + cdadd;
         }
         else {
@@ -22,9 +23,9 @@ public class PotatoUtils {
     static float castt = ServerConfigs.CAST_TOP.get().floatValue();
     static float castd = ServerConfigs.CAST_DIV.get().floatValue();
     static float casta = ServerConfigs.CAST_ADD.get().floatValue();
-    static boolean ctuncap = ServerConfigs.CAST_UNCAP.get();
+    static String ctuncap = ServerConfigs.CAST_UNCAP.get();
     public static double castsoftcap(double x) {
-        if(!ctuncap) {
+        if(ctuncap == "false") {
             return x <= castm ? x : castt / (castd * x) + casta;
         }
         else {
@@ -36,9 +37,9 @@ public class PotatoUtils {
     static float resma = ServerConfigs.RESIST_MAX.get().floatValue();
     static float resc = ServerConfigs.RESIST_CAP.get().floatValue();
     static float resp = ServerConfigs.RESIST_POW.get().floatValue();
-    static boolean runcap = ServerConfigs.RESIST_UNCAP.get();
+    static String runcap = ServerConfigs.RESIST_UNCAP.get();
     public static double resistsoftcap(double x) {
-        if(!runcap) {
+        if(runcap == "false") {
             return x <= resmi ? x : resma - (resc * resp / x);
         }
         else {
