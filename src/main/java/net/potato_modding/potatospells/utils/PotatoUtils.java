@@ -25,6 +25,9 @@ public class PotatoUtils {
     static float resc = ServerConfigs.RESIST_CAP.get().floatValue();
     static float resp = ServerConfigs.RESIST_POW.get().floatValue();
     public static double resistsoftcap(double x) {
-        return x <= resmi ? x : resma-(resc*resp/x);
+        if(x<=9.36) {
+            return x <= resmi ? x : resma - (resc * resp / (x * 0.976)) + x/50;
+        }
+        return x = 1.9;
     }
 }
