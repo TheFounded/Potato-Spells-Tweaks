@@ -1,7 +1,6 @@
 package net.potato_modding.potatospells.utils;
 
 import net.potato_modding.potatospells.config.ServerConfigs;
-import org.apache.logging.log4j.core.jmx.Server;
 
 public class PotatoUtils {
 
