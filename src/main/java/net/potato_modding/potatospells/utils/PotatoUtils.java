@@ -10,7 +10,7 @@ public class PotatoUtils {
         if(cduncap == "nerfed") {
             return x <= 0 ? (2*x)+0.44426 : x <= 4.80999 ? 2*Math.sin(0.28*(x+0.8)) : 2;
         }
-        if(cduncap == "apotheosis") {
+        else if(cduncap == "apotheosis") {
             return x <= 0 ? (3*x)+0.72137 : x <= 8.01198 ? 2*Math.sin(0.15*(x+2.46)) : 2;
         }
         else {
@@ -24,7 +24,7 @@ public class PotatoUtils {
         if(ctuncap == "nerfed") {
             return x <= 0 ? (2*x)+0.44426 : x <= 4.80999 ? 2*Math.sin(0.28*(x+0.8)) : 2;
         }
-        if(ctuncap == "apotheosis") {
+        else if(ctuncap == "apotheosis") {
             return x <= 0 ? (3*x)+0.72137 : x <= 8.01198 ? 2*Math.sin(0.15*(x+2.46)) : 2;
         }
         else {
@@ -38,7 +38,7 @@ public class PotatoUtils {
         if(runcap == "nerfed") {
             return x <= 0 ? (2*x)+0.44426 : x <= 4.80999 ? 2*Math.sin(0.28*(x+0.8)) : 2;
         }
-        if(runcap == "apotheosis") {
+        else if(runcap == "apotheosis") {
             return x <= 0 ? (3*x)+0.72137 : x <= 8.01198 ? 2*Math.sin(0.15*(x+2.46)) : 2;
         }
         else {
