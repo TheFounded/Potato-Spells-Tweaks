@@ -21,10 +21,10 @@ public class PotatoUtils {
 
     static String ctuncap = ServerConfigs.CAST_UNCAP.get();
     public static double castsoftcap(double x) {
-        if(cduncap == "nerfed") {
+        if(ctuncap == "nerfed") {
             return x <= 0 ? (2*x)+0.44426 : x <= 4.80999 ? 2*Math.sin(0.28*(x+0.8)) : 2;
         }
-        if(cduncap == "apotheosis") {
+        if(ctuncap == "apotheosis") {
             return x <= 0 ? (3*x)+0.72137 : x <= 8.01198 ? 2*Math.sin(0.15*(x+2.46)) : 2;
         }
         else {
@@ -35,10 +35,10 @@ public class PotatoUtils {
 
     static String runcap = ServerConfigs.RESIST_UNCAP.get();
     public static double resistsoftcap(double x) {
-        if(cduncap == "nerfed") {
+        if(runcap == "nerfed") {
             return x <= 0 ? (2*x)+0.44426 : x <= 4.80999 ? 2*Math.sin(0.28*(x+0.8)) : 2;
         }
-        if(cduncap == "apotheosis") {
+        if(runcap == "apotheosis") {
             return x <= 0 ? (3*x)+0.72137 : x <= 8.01198 ? 2*Math.sin(0.15*(x+2.46)) : 2;
         }
         else {
