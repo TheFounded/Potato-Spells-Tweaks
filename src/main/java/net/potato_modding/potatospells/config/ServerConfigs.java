@@ -12,14 +12,7 @@ public class ServerConfigs {
     static {
         {
             BUILDER.push("Potato Spells Utils");
-            BUILDER.comment("Here you can change the formulas to suit your balance");
-            BUILDER.comment("");
-            BUILDER.comment("DO NOT change anything if you don't know what you are doing!");
-            BUILDER.comment("There's some really annoying math going on, so avoid using random numbers.");
-            BUILDER.comment("");
-            BUILDER.comment("Also, you can change the toggle bellow to use 'uncapped' formulas");
-            BUILDER.comment("");
-            BUILDER.comment("RE-BALANCE FORMULAS");
+            BUILDER.comment("RE-BALANCE FORMULAS:");
             BUILDER.comment("Accept 'default', 'nerfed' or 'apotheosis'");
             BUILDER.comment("'default': Reaches 100% at ~3.63 (full immunity / instant cast / 0 cooldown)");
             BUILDER.comment("'nerfed': Reaches 100% at ~4.99 (full immunity / instant cast / 0 cooldown)");
