@@ -13,13 +13,13 @@ public class ServerConfigs {
         {
             BUILDER.push("Potato Spells Utils");
             BUILDER.comment("RE-BALANCE FORMULAS:");
-            BUILDER.comment("Accept 'default', 'nerfed' or 'apotheosis'");
-            BUILDER.comment("'default': Reaches 100% at ~3.63 (full immunity / instant cast / 0 cooldown)");
-            BUILDER.comment("'nerfed': Reaches 100% at ~4.99 (full immunity / instant cast / 0 cooldown)");
-            BUILDER.comment("'apotheosis': Reaches 100% at ~8.02 (full immunity / instant cast / 0 cooldown)");
-            COOLDOWN_UNCAP = BUILDER.worldRestart().define("Cooldown Formula", "default");
-            CAST_UNCAP = BUILDER.worldRestart().define("Cast Time Formula", "default");
-            RESIST_UNCAP = BUILDER.worldRestart().define("Spell Resist Formula", "default");
+            BUILDER.comment("Accept '1', '2' or '3'");
+            BUILDER.comment("1 = 'default': Reaches 100% at ~3.63 (full immunity / instant cast / 0 cooldown)");
+            BUILDER.comment("2 = 'nerfed': Reaches 100% at ~4.99 (full immunity / instant cast / 0 cooldown)");
+            BUILDER.comment("3 = 'apotheosis': Reaches 100% at ~8.02 (full immunity / instant cast / 0 cooldown)");
+            COOLDOWN_UNCAP = BUILDER.worldRestart().define("Cooldown Formula", "1");
+            CAST_UNCAP = BUILDER.worldRestart().define("Cast Time Formula", "1");
+            RESIST_UNCAP = BUILDER.worldRestart().define("Spell Resist Formula", "1");
         }
         BUILDER.pop();
         BUILDING = BUILDER.build();
