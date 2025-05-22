@@ -1,10 +1,17 @@
 package net.potato_modding.potatospells.utils;
 
+import net.minecraft.client.telemetry.events.WorldLoadEvent;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.potato_modding.potatospells.config.ServerConfigs;
+import org.apache.logging.log4j.core.jmx.Server;
 
 import java.util.Objects;
 
 public class PotatoUtils {
+
+    /*
+    Softcap Formulas
+    */
 
     static String cduncap = ServerConfigs.COOLDOWN_UNCAP.get();
     public static double cooldownsoftcap(double x) {
@@ -47,4 +54,8 @@ public class PotatoUtils {
             return x <= 3.62699 ? 2*(Math.sin(0.4*(x+0.3))) : 2;
         }
     }
+
+    /*
+    Bosses
+     */
 }
