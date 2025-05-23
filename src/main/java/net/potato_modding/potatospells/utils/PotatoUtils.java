@@ -51,7 +51,7 @@ public class PotatoUtils {
         }
         else {
             //This is the default formula | using 'else' in case user inputs something invalid
-            x < 0 ? 30/(30-x) : 2-(30/(30+x));
+            return x < 0 ? 30/(30-x) : 2-(30/(30+x));
         }
     }
 
