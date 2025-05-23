@@ -23,7 +23,7 @@ public class PotatoUtils {
         }
         else {
             //This is the default formula | using 'else' in case user inputs something invalid
-            return x <= 3.62699 ? 2*(Math.sin(0.4*(x+0.3))) : 2;
+            return x < 100 ? (x*0.01)+1 : 2;
         }
     }
 
@@ -37,7 +37,7 @@ public class PotatoUtils {
         }
         else {
             //This is the default formula | using 'else' in case user inputs something invalid
-            return x <= 3.62699 ? 2*(Math.sin(0.4*(x+0.3))) : 2;
+            return x < 100 ? (x*0.01)+1 : 2;
         }
     }
 
@@ -51,7 +51,7 @@ public class PotatoUtils {
         }
         else {
             //This is the default formula | using 'else' in case user inputs something invalid
-            return x <= 3.62699 ? 2*(Math.sin(0.4*(x+0.3))) : 2;
+            x < 0 ? 30/(30-x) : 2-(30/(30+x));
         }
     }
 
